@@ -3,6 +3,8 @@
     "download-queue-enabled": false,
     "incomplete-dir": "/downloads/incomplete",
     "incomplete-dir-enabled": true,
+    "ratio-limit": 0,
+    "ratio-limit-enabled": true,
     "rpc-host-whitelist-enabled": false,
     "rpc-whitelist-enabled": false,
     "script-torrent-done-enabled": true,
