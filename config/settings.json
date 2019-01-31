@@ -6,7 +6,7 @@
     "rpc-host-whitelist-enabled": false,
     "rpc-whitelist-enabled": false,
     "script-torrent-done-enabled": true,
-    "script-torrent-done-filename": "/config/remove-completed.sh",
+    "script-torrent-done-filename": "/config/torrent-done.sh",
     "trash-original-torrent-files": true,
     "utp-enabled": true,
     "watch-dir": "/watch",
