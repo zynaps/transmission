@@ -3,13 +3,11 @@ LABEL maintainer="Igor Vinokurov <zynaps@zynaps.ru>"
 
 WORKDIR /
 
-COPY . ./
+COPY rootfs ./
 
 RUN \
   set -xe && \
   apk add --no-cache transmission-daemon transmission-cli
-
-VOLUME ["/config", "/downloads", "/watch"]
 
 EXPOSE 9091/tcp 51413/tcp 51413/udp
 
