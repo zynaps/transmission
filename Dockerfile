@@ -7,7 +7,7 @@ COPY rootfs ./
 
 RUN \
   set -xe && \
-  apk add --no-cache transmission-daemon transmission-cli
+  apk add --no-cache transmission-daemon transmission-cli enca bash
 
 EXPOSE 9091/tcp 51413/tcp 51413/udp
 

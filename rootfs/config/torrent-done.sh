@@ -1,11 +1,17 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 
 set -xe
 
 env
 
-[[ -d "$TR_TORRENT_DIR/$TR_TORRENT_NAME" ]] && exit
+if [[ -d "$TR_TORRENT_DIR/$TR_TORRENT_NAME" ]]; then
+    [[ $(ls "$TR_TORRENT_DIR/$TR_TORRENT_NAME/"*.{avi,srt} | wc -l) -ne "2" ]] && exit
 
-mv -i -f "$TR_TORRENT_DIR/$TR_TORRENT_NAME" /plex/data/movies
+    enconv -L ru "$TR_TORRENT_DIR/$TR_TORRENT_NAME/$TR_TORRENT_NAME".srt || exit
 
-transmission-remote --torrent $TR_TORRENT_ID --remove
+    mv -i -f "$TR_TORRENT_DIR/$TR_TORRENT_NAME/"*.{avi,srt} /plex/data/movies
+else
+    mv -i -f "$TR_TORRENT_DIR/$TR_TORRENT_NAME" /plex/data/movies
+fi
+
+transmission-remote --torrent $TR_TORRENT_ID --remove-and-delete
