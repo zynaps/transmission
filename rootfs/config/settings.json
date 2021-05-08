@@ -1,7 +1,7 @@
 {
-    "download-dir": "/plex/downloads/complete",
+    "download-dir": "/complete",
     "download-queue-enabled": false,
-    "incomplete-dir": "/plex/downloads/incomplete",
+    "incomplete-dir": "/incomplete",
     "incomplete-dir-enabled": true,
     "ratio-limit": 0,
     "ratio-limit-enabled": true,
@@ -11,6 +11,6 @@
     "script-torrent-done-filename": "/config/torrent-done.sh",
     "trash-original-torrent-files": true,
     "utp-enabled": true,
-    "watch-dir": "/plex/downloads/watch",
+    "watch-dir": "/watch",
     "watch-dir-enabled": true
 }
